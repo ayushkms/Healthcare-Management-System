@@ -1,0 +1,586 @@
+/* Style the tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    background-color: #212d30;
+    color: white;
+}
+
+th {
+    background-color: #2e7aa1; 
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+/* Style buttons */
+a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Style specific buttons */
+.cancel-btn {
+    background-color: red;
+}
+
+.update-btn {
+    background-color: blue;
+}
+
+.book-btn {
+    background-color: green;
+}
+
+/* Style the page */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #dedede;
+    min-height: 100vh;
+}
+
+.common-heading {
+    text-align: center; 
+    background-color: #2e7aa1; 
+    color: #ffffff; 
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px; 
+}
+
+.book-appointment-container {
+    text-align: center; 
+    background-color: green; 
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.book-appointment-container a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.book-appointment-container a:hover {
+    text-decoration: underline;
+}
+
+/* Center the form and add styling */
+.book-appointment-container2 {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #c29d3f;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form labels */
+.book-appointment-container2 label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style input fields */
+.book-appointment-container2 input,
+.book-appointment-container2 select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style the submit button */
+.book-appointment-container2 button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.book-appointment-container2 button:hover {
+    background-color: #45a049;
+}
+
+.book-appointment-container2 input[type="date"] {
+    appearance: none;  
+}
+
+.book-appointment-container2 .ButtonDashboard {
+    width: 100%;
+    padding: 10px;
+    background-color: #4c59af;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;  
+}
+
+.book-appointment-container h2 {
+    text-align: center;
+}
+
+/* Center the update appointment form and add styling */
+.update-appointment-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #4bb4be;
+}
+
+/* Style form labels */
+.update-appointment-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style input fields and select dropdown */
+.update-appointment-container input,
+.update-appointment-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style the save changes button */
+.update-appointment-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.update-appointment-container button:hover {
+    background-color: #45a049;
+}
+
+/* Style the cancel button (Back to Dashboard) */
+.cancel-update {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cancel-update:hover {
+    background-color: darkred;
+}
+
+.update-appointment-container .ButtonDashboard {
+    width: 100%;
+    padding: 10px;
+    background-color: #4c59af;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;  
+}
+
+/* Center the add vitals form and style it */
+.add-vitals-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e9eb78;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form labels */
+.add-vitals-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style input fields */
+.add-vitals-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style the submit button */
+.add-vitals-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.add-vitals-container button:hover {
+    background-color: #45a049;
+}
+
+/* Style the cancel button (Back to Dashboard) */
+.cancel-vitals {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cancel-vitals:hover {
+    background-color: darkred;
+}
+
+.add-vitals-container .ButtonDashboard {
+    width: 100%;
+    padding: 10px;
+    background-color: #4c59af;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;  
+}
+
+/* Center the edit appointment form and add styling */
+.edit-appointment-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #7fd176;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Style form labels */
+.edit-appointment-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style input fields and select dropdown */
+.edit-appointment-container input,
+.edit-appointment-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style the save changes button */
+.edit-appointment-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.edit-appointment-container button:hover {
+    background-color: #45a049;
+}
+
+/* Style the cancel button (Back to Dashboard) */
+.cancel-edit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cancel-edit:hover {
+    background-color: darkred;
+}
+
+.edit-appointment-container .ButtonDashboard {
+    width: 100%;
+    padding: 10px;
+    background-color: #4c59af;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;  
+}
+
+/* Center the login form and add styling */
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #377cc1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style form labels */
+.login-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Style input fields */
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style the login button */
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-container button:hover {
+    background-color: #45a049;
+}
+
+/* Style the register link */
+.register-link {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Style the Register button similar to the Login button */
+.register-btn {
+    padding: 10px;
+    background-color: #f94343; /* Blue color for register button */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Center the register form and add styling */
+.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #96a0aa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style form labels */
+.register-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Style input fields */
+.register-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style the Register button */
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Blue color for register button */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.register-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Style the "Already have an account?" login link */
+.login-link {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* Style the "Back to Login" button */
+.back-to-login {
+    padding: 10px;
+    background-color: #da7b1c; /* Red background */
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.back-to-login:hover {
+    background-color: darkred;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode a {
+    color: #80cbc4; /* Light teal for links */
+}
+
+.dark-mode table {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #80cbc4;
+}
+
+.dark-mode th {
+    background-color: #333;
+}
+
+.dark-mode button, .dark-mode .logout-btn {
+    background-color: #ff9800;
+    color: black;
+}
+
+.dark-mode button:hover, .dark-mode .logout-btn:hover {
+    background-color: #ffb74d;
+}
+
+.header-buttons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.dark-mode-btn {
+    background-color: #555;
+    color: white;
+    padding: 8px 12px;
+    margin-left: 10px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-mode-btn:hover {
+    background-color: #777;
+}

@@ -1,0 +1,62 @@
+{% load static %}
+<script src="{% static 'js/script.js' %}" defer></script>
+
+<header style="margin: 0px;">
+    <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+    <h1 class="header-title">Healthcare Management System</h1>
+
+    <div class="header-buttons"></div>
+    <button onclick="toggleDarkMode()" class="dark-mode-btn">🌙 Dark Mode</button>
+</div>
+
+    <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+</header>
+
+<style>
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Reset margin for the header only */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #443e3e;
+        padding: 10px;
+        position: relative;
+        width: 100%;
+        margin: 0; /* Ensures no white space around header */
+        left: 0;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        height: 100px;
+        width: 100px;
+    }
+
+    .header-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .logout-btn {
+        background-color: rgb(244, 169, 49);
+        color: white;
+        padding: 8px 12px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .logout-btn:hover {
+        opacity: 0.8;
+        background-color: rgb(210, 210, 73);
+        color: rgb(0, 0, 0);
+    }
+</style>

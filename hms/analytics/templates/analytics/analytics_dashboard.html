@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    {% include 'users/header.html' %}
+
+    <div class="analytics-container">
+        <h2>📊 Healthcare Analytics Dashboard</h2>
+
+        <h3>Appointment Statistics</h3>
+        <p>Total Appointments: {{ total_appointments }}</p>
+        <p>Completed Appointments: {{ completed_appointments }}</p>
+        <p>Canceled Appointments: {{ canceled_appointments }}</p>
+
+        <h3>📈 Appointment Chart</h3>
+        <img src="{{ chart_url }}" alt="Appointment Statistics Chart">
+
+        <h3>🧠 Machine Learning Prediction</h3>
+        <p>Risk Prediction for a New Patient: <strong>{{ risk_prediction }}</strong></p>
+
+
+        <h3>🩺 Patient Vitals Overview</h3>
+        <p>Average Heart Rate: {{ avg_heart_rate }} bpm</p>
+        <p>Average Oxygen Level: {{ avg_oxygen }}%</p>
+        <p>Average Blood Pressure: {{ avg_blood_pressure }}</p>
+
+        <a href="{% url 'admin_dashboard' %}" class="back-to-dashboard">⬅️ Back to Dashboard</a>
+    </div>
+
+    {% include 'users/footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+{% include 'users/header.html' %}
+
+<div class="add-vitals-container">
+<h2>Add Patient Vitals & Diagnosis</h2>
+<p>Patient: {{ appointment.patient.username }}</p>
+<p>Date: {{ appointment.date }}</p>
+<p>Time: {{ appointment.time }}</p>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Vitals</button>
+</form>
+
+<a href="{% url 'doctor_dashboard' %}" class="ButtonDashboard">Back to Dashboard</a>
+
+</div>
+{% include 'users/footer.html' %}
+</body>
+</html>

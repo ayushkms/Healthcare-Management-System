@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    {% include 'users/header.html' %}
+
+
+    <h2 class="common-heading">Welcome, {{ user.username }}</h2>
+
+    <div class="book-appointment-container" class="book-btn">
+        <a href="{% url 'book_appointment' %}" is="buttonApp">📅 Book an Appointment</a>
+    </div>
+
+    {% if latest_vitals %}
+    <h3 class="common-heading">⬇ Your Latest Vitals ⬇</h3>
+    <table>
+        <tr>
+            <th>Heart Rate</th>
+            <th>Oxygen Level</th>
+            <th>Blood Pressure</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Diagnosis</th>
+        </tr>
+        <tr>
+            <td>❤️ {{ latest_vitals.heart_rate }} bpm</td>
+            <td>🌿 {{ latest_vitals.oxygen_level }}%</td>
+            <td>💉 {{ latest_vitals.blood_pressure }}</td>
+            <td>📏 {{ latest_vitals.height }} cm</td>
+            <td>⚖️ {{ latest_vitals.weight }} kg</td>
+            <td>🏥 {{ latest_vitals.diagnosis }}</td>
+        </tr>
+    </table>
+    {% else %}
+    <p>No vitals recorded yet.</p>
+    {% endif %}
+
+    <h3 class="common-heading">⬇ Your Appointments ⬇</h3>
+    <table>
+        <tr>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        {% for appointment in appointments %}
+        <tr>
+            <td>{{ appointment.doctor.username }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.time }}</td>
+            <td>{{ appointment.status }}</td>
+            <td>
+                {% if appointment.status != 'canceled' %}
+                <a href="{% url 'cancel_appointment' appointment.id %}" class="cancel-btn"
+                    onclick="return confirm('Are you sure you want to cancel this appointment?');">❌ Cancel</a>
+                {% else %}
+                Canceled
+                {% endif %}
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5">No appointments booked yet.</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% include 'users/footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+{% include 'users/header.html' %}
+
+<div class="edit-appointment-container">
+
+<h2>Edit Appointment</h2>
+<p>Editing appointment for {{ appointment.patient.username }}</p>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Changes</button>
+</form>
+
+<a href="{% url 'admin_dashboard' %}" class="ButtonDashboard">Back to Admin Dashboard</a>
+
+</div>
+{% include 'users/footer.html' %}
+</body>
+</html>
